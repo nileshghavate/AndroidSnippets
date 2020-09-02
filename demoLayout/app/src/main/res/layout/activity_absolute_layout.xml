@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:layout_height="500px"
+        android:layout_width="500px"/>
+
+    <TextView
+        android:text="Frame Demo"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_x="200dp"
+        android:layout_y="200dp"
+     />
+</AbsoluteLayout>

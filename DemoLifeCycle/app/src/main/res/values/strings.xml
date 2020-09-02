@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DemoLifeCycle</string>
+    <string name="txt1_label"> Hello DBIT</string>
+    <string name="btn1_label">Upload</string>
+
+</resources>
