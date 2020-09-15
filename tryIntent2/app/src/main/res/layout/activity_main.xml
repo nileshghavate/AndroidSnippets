@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <!-- EDIT TEXT with the hint of "Enter Phone No." -->
+    <EditText
+        android:id="@+id/etNo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter phone no."
+        android:textColor="@android:color/holo_blue_light"
+        android:inputType="phone" />
+
+    <!-- BUTTON for the option Call -->
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@android:color/primary_text_light"
+        android:text="Call" />
+
+    <!-- BUTTON for the option Camera -->
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Camera" />
+
+    <!-- BUTTON for the option Contacts -->
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Contact" />
+
+    <!-- BUTTON for the option Browser -->
+    <Button
+        android:id="@+id/btnBrowser"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Browser" />
+
+    <!-- BUTTON for the option Call log -->
+    <Button
+        android:id="@+id/btnCallLog"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Call Log" />
+
+    <!-- BUTTON for the option Gallery -->
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Gallery" />
+
+    <!-- BUTTON for the option Dialpad -->
+    <Button
+        android:id="@+id/btnDial"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/primary_text_light"
+        android:layout_height="55dp"
+        android:text="Dialpad" />
+
+</LinearLayout>

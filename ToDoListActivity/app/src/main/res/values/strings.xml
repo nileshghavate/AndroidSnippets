@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ToDoListActivity</string>
+    <string name="help">https://www.sitepoint.com/starting-android-development-creating-todo-app/</string>
+</resources>
