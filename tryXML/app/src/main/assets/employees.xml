@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <id text='d'>1111</id>
+        <name>ABC</name>
+        <department>IT</department>
+        <type>Permanent</type>
+        <email>abc.dbit@gmail.com</email>
+    </employee>
+    <employee>
+        <id>2222</id>
+        <name>PQR</name>
+        <department>Computer</department>
+        <type>Contract</type>
+        <email>pqr.dbit@gmail.com</email>
+    </employee>
+    <employee>
+        <id>3333</id>
+        <name>XYZ</name>
+        <department>Mech</department>
+        <type>Permanent</type>
+        <email>xyz.dbit@gmail.com</email>
+    </employee>
+</employees>
