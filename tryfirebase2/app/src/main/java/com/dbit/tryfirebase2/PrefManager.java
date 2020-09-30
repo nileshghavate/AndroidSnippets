@@ -15,8 +15,8 @@ public class PrefManager {
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("Email", email);
-        editor.commit();        editor.putString("Password", password);
-
+        editor.putString("Password", password);
+        editor.commit();
     }
 
     public String getEmail() {
@@ -26,7 +26,7 @@ public class PrefManager {
 
     public String getPwd() {
         SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
-        return sharedPreferences.getString("Pwd", "");
+        return sharedPreferences.getString("Password", "");
     }
 
     public boolean isUserLogedOut() {

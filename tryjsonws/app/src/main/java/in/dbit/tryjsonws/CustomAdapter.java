@@ -1,4 +1,4 @@
-package com.dbit.tryjson;
+package in.dbit.tryjsonws;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,11 +7,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>{
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     ArrayList<String> personNames;
     ArrayList<String> emailIds;
@@ -26,9 +27,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
 
+
+    @NonNull
     @Override
-    public int getItemCount() {
-        return personNames.size();
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        // infalte the item Layout
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayout, parent, false);
+        // get the reference of item view's
+
+        // pass the view to View Holder
+        MyViewHolder vh = new MyViewHolder(v);
+        return vh;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -44,18 +54,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         }
     }
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        // infalte the item Layout
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayout, parent, false);
-        
-        // pass the view to View Holder
-        MyViewHolder vh = new MyViewHolder(v); 
-        return vh;
-    }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(MyViewHolder holder,final int position) {
+
         // set the data in items
         holder.name.setText(personNames.get(position));
         holder.email.setText(emailIds.get(position));
@@ -66,12 +68,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 // display a toast with person name on item click
-            Toast.makeText(context, personNames.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, personNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
-
+    public int getItemCount() {
+        return personNames.size();
+    }
 
 }

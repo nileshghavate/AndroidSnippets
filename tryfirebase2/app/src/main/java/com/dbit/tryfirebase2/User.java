@@ -1,5 +1,7 @@
 package com.dbit.tryfirebase2;
 
+
+// POJO (Plain Old Java Object) Class
 public class User {
 
     public  String email;

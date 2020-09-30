@@ -27,35 +27,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // get the reference of RecyclerView
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
         // set a LinearLayoutManager with default vertical orientation
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
         try {
-            String n= new JSONObject(loadJSONFromAsset()).getJSONArray("users").getJSONObject(1).getString("name");
-            personNames.add(n.toString());
-            String  email="email@ngi.com";
-            emailIds.add(email);
-            String mob="9594813901";
-            mobileNumbers.add(mob);
-//            // get JSONObject from JSON file
-//            JSONObject obj = new JSONObject(loadJSONFromAsset());
-//            // fetch JSONArray named users
-//            JSONArray userArray = obj.getJSONArray("users");
-//            // implement for loop for getting users list data
-//            for (int i = 0; i < userArray.length(); i++) {
-//                // create a JSONObject for fetching single user data
-//                JSONObject userDetail = userArray.getJSONObject(i);
-//                // fetch email and name and store it in arraylist
-//                personNames.add(userDetail.getString("name"));
-//                emailIds.add(userDetail.getString("email"));
-//                // create a object for getting contact data from JSONObject
-//                JSONObject contact = userDetail.getJSONObject("contact");
-//                // fetch mobile number and store it in arraylist
-//                mobileNumbers.add(contact.getString("mobile"));
-//            }
+             // get JSONObject from JSON file
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+
+            // fetch JSONArray named users
+            JSONArray userArray = obj.getJSONArray("users");
+
+            // implement for loop for getting users list data
+            for (int i = 0; i < userArray.length(); i++)
+            {
+                // create a JSONObject for fetching single user data
+                JSONObject userDetail = userArray.getJSONObject(i);
+
+                // fetch email and name and store it in arraylist
+                personNames.add(userDetail.getString("name"));
+                emailIds.add(userDetail.getString("email"));
+
+                // create a object for getting contact data from JSONObject
+                JSONObject contact = userDetail.getJSONObject("contact");
+
+                // fetch mobile number and store it in arraylist
+                mobileNumbers.add(contact.getString("mobile"));
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
