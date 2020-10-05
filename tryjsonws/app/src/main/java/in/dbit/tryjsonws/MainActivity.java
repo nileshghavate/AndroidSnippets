@@ -37,27 +37,11 @@ public class MainActivity extends AppCompatActivity {
     //#2
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
-    private String url = "https://run.mocky.io/v3/f933c888-d376-4888-b03b-492b23decf51";
+    //private String url = "https://run.mocky.io/v3/f933c888-d376-4888-b03b-492b23decf51";
+    private String url = "http://domainaa07a6.stackstaging.com/api.php";
     private AppCompatButton btnRequest;
     private static final String TAG = MainActivity.class.getName();
     private String res="";
-
-
-    public String loadJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("users_list.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
 
 
 
