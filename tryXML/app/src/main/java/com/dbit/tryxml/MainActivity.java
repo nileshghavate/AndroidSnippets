@@ -23,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list);
 
         List<Employee> employees = null;
+
         try {
             Log.i(""+getApplicationContext(),"XML Parser ");
+
             XMLPullParserHandler parser = new XMLPullParserHandler();
             employees = parser.parse(getAssets().open("employees.xml"));
             ArrayAdapter<Employee> adapter =

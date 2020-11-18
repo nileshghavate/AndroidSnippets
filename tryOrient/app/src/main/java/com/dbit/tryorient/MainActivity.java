@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
       }
 
     @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
+    protected void onRestoreInstanceState(@NonNull Bundle outState) {
+        super.onRestoreInstanceState(outState);
 
-        et.setText(savedInstanceState.getString("MyName"));
-        score=savedInstanceState.getInt("MyScore");
+        et.setText(outState.getString("MyName"));
+        score=outState.getInt("MyScore");
 
     }
 
